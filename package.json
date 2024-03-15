@@ -6,7 +6,8 @@
     "node": ">=20.10.0"
   },
   "scripts": {
-    "test-node": "pnpm -F test test"
+    "test-node": "pnpm -F test test",
+    "publish": "pnpm -F publish --access public --dry"
   },
   "license": "MIT",
   "dependencies": {
