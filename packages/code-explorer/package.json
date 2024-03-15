@@ -1,0 +1,53 @@
+{
+  "name": "code-explorer",
+  "version": "0.1.0",
+  "description": "Fast and simple code explorer powered by tree-sitter",
+  "license": "MIT",
+  "keywords": [
+    "tree-sitter",
+    "code-explorer"
+  ],
+  "files": [
+    "dist",
+    "!dist/*.node"
+  ],
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "artifacts": "napi artifacts -o=./src --npm-dir ./npm",
+    "build-binding": "napi build -o=./src --manifest-path ../../crates/binding/Cargo.toml --platform -p code_explorer_binding --js binding.js --dts binding.d.ts",
+    "build-binding:release": "napi build -o=./src --release --manifest-path ../../crates/binding/Cargo.toml --platform -p code_explorer_binding --js binding.js --dts binding.d.ts",
+    "build-node": "unbuild",
+    "build": "pnpm build-binding && pnpm build-node",
+    "prepublishOnly": "napi prepublish -p ./npm --tag-style npm"
+  },
+  "napi": {
+    "binaryName": "code-explorer-binding",
+    "packageName": "@code-explorer/binding",
+    "targets": [
+      "x86_64-unknown-linux-musl",
+      "aarch64-unknown-linux-gnu",
+      "i686-pc-windows-msvc",
+      "armv7-unknown-linux-gnueabihf",
+      "aarch64-apple-darwin",
+      "aarch64-linux-android",
+      "x86_64-unknown-freebsd",
+      "aarch64-unknown-linux-musl",
+      "aarch64-pc-windows-msvc",
+      "armv7-linux-androideabi"
+    ]
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^3.0.0-alpha.43",
+    "@types/node": "^20.11.27",
+    "fast-glob": "^3.3.2",
+    "unbuild": "^2.0.0"
+  }
+}
