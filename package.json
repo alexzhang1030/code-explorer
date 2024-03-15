@@ -1,13 +1,14 @@
 {
   "name": "monorepo",
   "private": true,
+  "version": "0.0.1",
   "packageManager": "pnpm@8.15.4",
   "engines": {
     "node": ">=20.10.0"
   },
+  "files": [],
   "scripts": {
-    "test-node": "pnpm -F test test",
-    "publish": "pnpm -r publish --access public --dry"
+    "test-node": "pnpm -F test test"
   },
   "license": "MIT",
   "dependencies": {

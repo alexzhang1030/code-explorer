@@ -1,6 +1,6 @@
 {
   "name": "code-explorer",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Fast and simple code explorer powered by tree-sitter",
   "license": "MIT",
   "keywords": [
@@ -49,5 +49,17 @@
     "@types/node": "^20.11.27",
     "fast-glob": "^3.3.2",
     "unbuild": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "@code-explorer/binding-linux-x64-musl": "0.0.1",
+    "@code-explorer/binding-linux-arm64-gnu": "0.0.1",
+    "@code-explorer/binding-win32-ia32-msvc": "0.0.1",
+    "@code-explorer/binding-linux-arm-gnueabihf": "0.0.1",
+    "@code-explorer/binding-darwin-arm64": "0.0.1",
+    "@code-explorer/binding-android-arm64": "0.0.1",
+    "@code-explorer/binding-freebsd-x64": "0.0.1",
+    "@code-explorer/binding-linux-arm64-musl": "0.0.1",
+    "@code-explorer/binding-win32-arm64-msvc": "0.0.1",
+    "@code-explorer/binding-android-arm-eabi": "0.0.1"
   }
 }

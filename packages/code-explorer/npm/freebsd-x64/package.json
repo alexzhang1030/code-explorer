@@ -1,15 +1,15 @@
 {
-  "name": "@code-explorer/node-binding-darwin-x64",
-  "version": "0.0.4",
+  "name": "@code-explorer/node-binding-freebsd-x64",
+  "version": "0.0.1",
   "os": [
-    "darwin"
+    "freebsd"
   ],
   "cpu": [
     "x64"
   ],
-  "main": "rolldown.darwin-x64.node",
+  "main": "rolldown.freebsd-x64.node",
   "files": [
-    "rolldown.darwin-x64.node"
+    "rolldown.freebsd-x64.node"
   ],
   "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API. ",
   "keywords": [

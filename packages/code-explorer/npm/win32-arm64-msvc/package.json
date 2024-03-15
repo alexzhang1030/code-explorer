@@ -1,15 +1,15 @@
 {
-  "name": "@code-explorer/node-binding-win32-x64-msvc",
-  "version": "0.0.4",
+  "name": "@code-explorer/node-binding-win32-arm64-msvc",
+  "version": "0.0.1",
   "os": [
     "win32"
   ],
   "cpu": [
-    "x64"
+    "arm64"
   ],
-  "main": "rolldown.win32-x64-msvc.node",
+  "main": "rolldown.win32-arm64-msvc.node",
   "files": [
-    "rolldown.win32-x64-msvc.node"
+    "rolldown.win32-arm64-msvc.node"
   ],
   "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API. ",
   "keywords": [

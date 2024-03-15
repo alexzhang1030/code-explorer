@@ -1,15 +1,15 @@
 {
-  "name": "@code-explorer/node-binding-linux-arm-gnueabihf",
-  "version": "0.0.4",
+  "name": "@code-explorer/node-binding-darwin-x64",
+  "version": "0.0.1",
   "os": [
-    "linux"
+    "darwin"
   ],
   "cpu": [
-    "arm"
+    "x64"
   ],
-  "main": "rolldown.linux-arm-gnueabihf.node",
+  "main": "rolldown.darwin-x64.node",
   "files": [
-    "rolldown.linux-arm-gnueabihf.node"
+    "rolldown.darwin-x64.node"
   ],
   "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API. ",
   "keywords": [
