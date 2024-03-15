@@ -1,10 +1,10 @@
-import { findImports } from "code-explorer";
+import { findImports } from 'code-explorer'
 
-it("find imports", () => {
+it('find imports', () => {
   const code = `
     import { foo } from 'bar'
-  `;
-  const res = findImports(code);
+  `
+  const res = findImports(code)
   expect(res).toMatchInlineSnapshot(`
     [
       {
@@ -14,5 +14,5 @@ it("find imports", () => {
         "source": "'bar'",
       },
     ]
-  `);
-});
+  `)
+})

@@ -7,11 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "rolldown.freebsd-x64.node",
-  "files": [
-    "rolldown.freebsd-x64.node"
-  ],
   "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API. ",
+  "license": "MIT",
+  "repository": "git@github.com:rolldown-rs/rolldown.git",
   "keywords": [
     "napi-rs",
     "NAPI",
@@ -25,13 +23,15 @@
     "swc",
     "esbuild"
   ],
-  "license": "MIT",
+  "main": "rolldown.freebsd-x64.node",
+  "files": [
+    "rolldown.freebsd-x64.node"
+  ],
   "engines": {
     "node": ">= 10"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
-  },
-  "repository": "git@github.com:rolldown-rs/rolldown.git"
+  }
 }

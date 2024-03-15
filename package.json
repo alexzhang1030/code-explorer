@@ -1,17 +1,31 @@
 {
   "name": "monorepo",
-  "private": true,
   "version": "0.0.1",
+  "private": true,
   "packageManager": "pnpm@8.15.4",
+  "license": "MIT",
+  "files": [],
   "engines": {
     "node": ">=20.10.0"
   },
-  "files": [],
   "scripts": {
-    "test-node": "pnpm -F test test"
+    "test-node": "pnpm -F test test",
+    "prepare": "simple-git-hooks"
   },
-  "license": "MIT",
   "dependencies": {
     "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.8.2",
+    "eslint": "npm:eslint-ts-patch@^8.57.0-0",
+    "eslint-ts-patch": "^8.57.0-0",
+    "lint-staged": "^15.2.2",
+    "simple-git-hooks": "^2.10.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

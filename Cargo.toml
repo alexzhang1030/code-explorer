@@ -1,18 +1,18 @@
 [workspace]
-members = ["crates/*"]
+members = [ "crates/*" ]
 resolver = "2"
 
 [workspace.dependencies]
 # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
-napi = { version = "2.12.2", default-features = false, features = ["napi4"] }
+napi = { version = "2.12.2", default-features = false, features = [ "napi4" ] }
 napi-derive = "2.12.2"
+
+[workspace.package]
+version = "0.1.0"
+authors = [ "Alex Zhang <alexzhang1030@foxmail.com>" ]
+edition = "2021"
+license = "MIT"
 
 [profile.release]
 lto = true
 strip = "symbols"
-
-[workspace.package]
-version = "0.1.0"
-authors = ["Alex Zhang <alexzhang1030@foxmail.com>"]
-edition = "2021"
-license = "MIT"

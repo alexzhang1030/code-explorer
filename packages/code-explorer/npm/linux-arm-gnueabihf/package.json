@@ -7,11 +7,9 @@
   "cpu": [
     "arm"
   ],
-  "main": "rolldown.linux-arm-gnueabihf.node",
-  "files": [
-    "rolldown.linux-arm-gnueabihf.node"
-  ],
   "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API. ",
+  "license": "MIT",
+  "repository": "git@github.com:rolldown-rs/rolldown.git",
   "keywords": [
     "napi-rs",
     "NAPI",
@@ -25,13 +23,15 @@
     "swc",
     "esbuild"
   ],
-  "license": "MIT",
+  "main": "rolldown.linux-arm-gnueabihf.node",
+  "files": [
+    "rolldown.linux-arm-gnueabihf.node"
+  ],
   "engines": {
     "node": ">= 10"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
-  },
-  "repository": "git@github.com:rolldown-rs/rolldown.git"
+  }
 }

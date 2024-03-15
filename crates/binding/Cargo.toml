@@ -2,16 +2,22 @@
 name = "code_explorer_binding"
 
 version.workspace = true
+
 authors.workspace = true
+
 edition.workspace = true
+
 license.workspace = true
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = [ "cdylib" ]
 
 [dependencies]
 code_explorer = { path = "../core" }
-napi = { workspace = true, features = ["napi4", "async"] }
+napi = { workspace = true, features = [
+  "napi4",
+  "async"
+] }
 napi-derive = { workspace = true }
 
 [build-dependencies]
