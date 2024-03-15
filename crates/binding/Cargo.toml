@@ -1,7 +1,13 @@
 [package]
 name = "code_explorer_binding"
+version = "0.0.1"
+description = "code-explorer node binding"
 
-version.workspace = true
+documentation.workspace = true
+
+homepage.workspace = true
+
+repository.workspace = true
 
 authors.workspace = true
 
@@ -9,16 +15,16 @@ edition.workspace = true
 
 license.workspace = true
 
+readme.workspace = true
+
 [lib]
 crate-type = [ "cdylib" ]
 
 [dependencies]
 code_explorer = { path = "../core" }
-napi = { workspace = true, features = [
-  "napi4",
-  "async"
-] }
-napi-derive = { workspace = true }
+# Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
+napi = { version = "2.12.2", default-features = false, features = [ "napi4" ] }
+napi-derive = "2.12.2"
 
 [build-dependencies]
 napi-build = "2"
