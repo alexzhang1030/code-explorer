@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test-node": "pnpm -F test test",
-    "publish": "pnpm -F publish --access public --dry"
+    "publish": "pnpm -r publish --access public --dry"
   },
   "license": "MIT",
   "dependencies": {
