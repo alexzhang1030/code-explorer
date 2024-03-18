@@ -335,4 +335,4 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-module.exports.findImports = nativeBinding.findImports
+module.exports.CodeExplorer = nativeBinding.CodeExplorer

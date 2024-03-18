@@ -1,4 +1,4 @@
-use code_explorer::find_imports as find_imports_impl;
+use code_explorer::CodeExplorer as CodeExplorerImpl;
 use napi_derive::napi;
 
 #[napi(object)]
@@ -8,13 +8,29 @@ pub struct ImportResults {
 }
 
 #[napi]
-pub fn find_imports(code: String) -> Vec<ImportResults> {
-  let res = find_imports_impl(&code);
-  res
-    .into_iter()
-    .map(|(source, ids)| ImportResults {
-      ids: ids.ids,
-      source,
-    })
-    .collect()
+pub struct CodeExplorer {
+  inner: CodeExplorerImpl,
+}
+
+#[napi]
+impl CodeExplorer {
+  #[napi(constructor)]
+  pub fn new(raw_code: String) -> Self {
+    Self {
+      inner: CodeExplorerImpl::new(&raw_code),
+    }
+  }
+
+  #[napi]
+  pub fn find_imports(&self) -> Vec<ImportResults> {
+    self
+      .inner
+      .find_imports()
+      .into_iter()
+      .map(|(source, ids)| ImportResults {
+        ids: ids.ids,
+        source,
+      })
+      .collect()
+  }
 }
