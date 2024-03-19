@@ -1,5 +1,6 @@
 {
   "name": "code-explorer",
+  "type": "module",
   "version": "0.0.1",
   "description": "Fast and simple code explorer powered by tree-sitter",
   "license": "MIT",
@@ -9,13 +10,21 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
   "files": [
     "!dist/*.node",
     "dist"
