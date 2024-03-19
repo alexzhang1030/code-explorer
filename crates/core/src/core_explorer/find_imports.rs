@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use tree_sitter::{Parser, Query, QueryCursor};
+use tree_sitter::{Query, QueryCursor, Tree};
 
 const QUERY: &'static str = r"
 (import_statement
@@ -18,25 +18,15 @@ pub struct ImportStmt {
   pub ids: Vec<String>,
 }
 
-pub fn find_imports(code: &String) -> HashMap<String, ImportStmt> {
-  let code_bytes = code.as_bytes();
-
-  // Initialize the parser
-  let mut parser = Parser::new();
-  let language = tree_sitter_typescript::language_typescript();
-  parser
-    .set_language(language)
-    .expect("Error loading TypeScript language");
-
-  // Parse the code
-  let tree = parser.parse(code, None).expect("Error parsing code");
+pub fn find_imports(raw_code: &String, tree: &Tree) -> HashMap<String, ImportStmt> {
   let root_node = tree.root_node();
 
   // Prepare the query
-  let query = Query::new(language, QUERY).expect("Error compiling query");
+  let query = Query::new(tree.language(), QUERY).expect("Error compiling query");
   let mut query_cursor = QueryCursor::new();
 
   // Find the matches
+  let code_bytes = raw_code.as_bytes();
   let captures = query_cursor.matches(&query, root_node, code_bytes);
   let mut map: HashMap<String, ImportStmt> = HashMap::new();
   let capture_names = &query.capture_names();
@@ -68,15 +58,27 @@ pub fn find_imports(code: &String) -> HashMap<String, ImportStmt> {
 
 #[cfg(test)]
 mod tests {
-  use super::*;
+  use super::find_imports;
+  use tree_sitter::Parser;
 
   #[test]
-  fn it_works() {
+  fn find_imports_works() {
     let code = r#"
         import { a } from 'b';
         import { c } from 'd';
         "#;
-    let res = find_imports(&code.to_string());
+
+    // Initialize the parser
+    let mut parser = Parser::new();
+    let language = tree_sitter_typescript::language_typescript();
+    parser
+      .set_language(language)
+      .expect("Error loading TypeScript language");
+
+    // Parse the code
+    let tree = parser.parse(code, None).expect("Error parsing code");
+
+    let res = find_imports(&code.to_string(), &tree);
     assert_eq!(res.len(), 2);
   }
 }
