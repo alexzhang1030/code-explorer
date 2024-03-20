@@ -1,6 +1,6 @@
 mod find_imports;
 
-pub use find_imports::{find_imports, ImportStmt};
+pub use find_imports::{find_imports, ImportBinding};
 use std::collections::HashMap;
 use tree_sitter::{Parser, Tree};
 
@@ -27,7 +27,7 @@ impl CodeExplorer {
     }
   }
 
-  pub fn find_imports(&self) -> HashMap<String, ImportStmt> {
+  pub fn find_imports(&self) -> HashMap<String, Vec<ImportBinding>> {
     find_imports(&self.raw_code, &self.tree)
   }
 }

@@ -6,8 +6,14 @@ export class CodeExplorer {
   findImports(): Array<ImportResults>
 }
 
+export interface ImportBinding {
+  local: string
+  imported: string
+  isType: boolean
+}
+
 export interface ImportResults {
-  ids: Array<string>
+  bindings: Array<ImportBinding>
   source: string
 }
 

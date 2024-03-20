@@ -6,19 +6,22 @@ const QUERY: &'static str = r"
   (import_clause
     (named_imports
       (import_specifier
-        (identifier) @import.id
-      )
+        name: (identifier) @import.imported
+        alias: (identifier)? @import.alias
+      ) @import.specifier
     )
   )
   source: (string) @import.source
-)";
+) @import.statment";
 
 #[derive(Debug, PartialEq)]
-pub struct ImportStmt {
-  pub ids: Vec<String>,
+pub struct ImportBinding {
+  pub local: String,
+  pub imported: String,
+  pub is_type: bool,
 }
 
-pub fn find_imports(raw_code: &String, tree: &Tree) -> HashMap<String, ImportStmt> {
+pub fn find_imports(raw_code: &String, tree: &Tree) -> HashMap<String, Vec<ImportBinding>> {
   let root_node = tree.root_node();
 
   // Prepare the query
@@ -28,29 +31,51 @@ pub fn find_imports(raw_code: &String, tree: &Tree) -> HashMap<String, ImportStm
   // Find the matches
   let code_bytes = raw_code.as_bytes();
   let captures = query_cursor.matches(&query, root_node, code_bytes);
-  let mut map: HashMap<String, ImportStmt> = HashMap::new();
+  let mut map: HashMap<String, Vec<ImportBinding>> = HashMap::new();
   let capture_names = &query.capture_names();
 
   // Process the matches
   for match_ in captures {
-    for (index, c) in match_.captures.iter().enumerate() {
+    let mut source = String::new();
+    let mut local = String::new();
+    let mut imported = String::new();
+    let mut is_type = false;
+
+    for c in match_.captures.iter() {
       let capture_name = &capture_names[c.index as usize];
-      if capture_name == "import.id" {
-        continue;
-      }
-      let previous = match_.captures.get(index - 1);
-      if let Some(previous) = previous {
-        if capture_names[previous.index as usize] == "import.source" {
-          continue;
+      let capture_text = c.node.utf8_text(code_bytes).unwrap().to_string();
+
+      match capture_name.as_str() {
+        "import.source" => source = capture_text,
+        "import.imported" => imported = capture_text,
+        "import.alias" => local = capture_text,
+        "import.specifier" => {
+          if capture_text.starts_with("type ") && is_type == false {
+            is_type = true
+          }
         }
-        let code = c.node.utf8_text(code_bytes).unwrap().to_string();
-        let previous_code = previous.node.utf8_text(code_bytes).unwrap().to_string();
-        map
-          .entry(code)
-          .or_insert(ImportStmt { ids: vec![] })
-          .ids
-          .push(previous_code);
+        "import.statment" => {
+          if capture_text.starts_with("import type ") && is_type == false {
+            is_type = true
+          }
+        }
+        _ => {}
       }
+    }
+
+    if !imported.is_empty() {
+      let binding = ImportBinding {
+        local: match local.as_str() {
+          "" => imported.clone(),
+          _ => local.clone(),
+        },
+        imported: imported.clone(),
+        is_type,
+      };
+      map
+        .entry(source.clone())
+        .or_insert_with(Vec::new)
+        .push(binding);
     }
   }
   map
@@ -64,8 +89,8 @@ mod tests {
   #[test]
   fn find_imports_works() {
     let code = r#"
-        import { a } from 'b';
-        import { c } from 'd';
+        import type { a, b as bb, type c, type d as dd } from 'source1';
+        import { a, b as bb, type c, type d as dd } from 'source2';
         "#;
 
     // Initialize the parser
