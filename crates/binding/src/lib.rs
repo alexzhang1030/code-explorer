@@ -2,8 +2,15 @@ use code_explorer::CodeExplorer as CodeExplorerImpl;
 use napi_derive::napi;
 
 #[napi(object)]
+pub struct ImportBinding {
+  pub local: String,
+  pub imported: String,
+  pub is_type: bool,
+}
+
+#[napi(object)]
 pub struct ImportResults {
-  pub ids: Vec<String>,
+  pub bindings: Vec<ImportBinding>,
   pub source: String,
 }
 
@@ -27,8 +34,15 @@ impl CodeExplorer {
       .inner
       .find_imports()
       .into_iter()
-      .map(|(source, ids)| ImportResults {
-        ids: ids.ids,
+      .map(|(source, bds)| ImportResults {
+        bindings: bds
+          .into_iter()
+          .map(|b| ImportBinding {
+            local: b.local,
+            imported: b.imported,
+            is_type: b.is_type,
+          })
+          .collect(),
         source,
       })
       .collect()
