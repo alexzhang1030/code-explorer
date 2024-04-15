@@ -28,7 +28,7 @@
     "rolldown.linux-arm64-musl.node"
   ],
   "engines": {
-    "node": ">= 10"
+    "node": ">= 20.12.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
