@@ -28,7 +28,7 @@
     "rolldown.linux-arm64-gnu.node"
   ],
   "engines": {
-    "node": ">= 20.12.2"
+    "node": ">= 20.13.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
