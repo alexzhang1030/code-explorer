@@ -2,7 +2,7 @@
   "name": "monorepo",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@9.3.0",
+  "packageManager": "pnpm@9.4.0",
   "license": "MIT",
   "files": [],
   "scripts": {
@@ -10,7 +10,7 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.21.1",
