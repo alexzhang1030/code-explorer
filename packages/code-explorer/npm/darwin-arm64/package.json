@@ -28,7 +28,7 @@
     "rolldown.darwin-arm64.node"
   ],
   "engines": {
-    "node": ">= 20.15.0"
+    "node": ">= 20.15.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
