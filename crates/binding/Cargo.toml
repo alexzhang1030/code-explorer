@@ -24,7 +24,7 @@ crate-type = [ "cdylib" ]
 code_explorer = { path = "../core" }
 # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
 napi = { version = "2.16.8", default-features = false, features = [ "napi4" ] }
-napi-derive = "2.16.8"
+napi-derive = "2.16.9"
 
 [build-dependencies]
 napi-build = "2.1.3"
