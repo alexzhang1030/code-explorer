@@ -28,7 +28,7 @@
     "rolldown.linux-arm-gnueabihf.node"
   ],
   "engines": {
-    "node": ">= 20.15.1"
+    "node": ">= 20.16.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
