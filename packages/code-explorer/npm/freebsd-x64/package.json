@@ -28,7 +28,7 @@
     "rolldown.freebsd-x64.node"
   ],
   "engines": {
-    "node": ">= 20.16.0"
+    "node": ">= 20.17.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
