@@ -2,7 +2,7 @@
   "name": "monorepo",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@9.8.0",
+  "packageManager": "pnpm@9.9.0",
   "license": "MIT",
   "files": [],
   "scripts": {
@@ -16,7 +16,7 @@
     "@antfu/eslint-config": "^3.0.0",
     "eslint": "npm:eslint-ts-patch@^8.57.0-0",
     "eslint-ts-patch": "^8.57.0-0",
-    "lint-staged": "^15.2.9",
+    "lint-staged": "^15.2.10",
     "simple-git-hooks": "^2.11.1"
   },
   "simple-git-hooks": {
