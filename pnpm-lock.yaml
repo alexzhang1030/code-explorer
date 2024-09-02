@@ -14,7 +14,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.0.0
-        version: 3.0.0(@typescript-eslint/utils@8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4))(@vue/compiler-sfc@3.4.21)(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)(vitest@1.3.1(@types/node@20.16.1))
+        version: 3.0.0(@typescript-eslint/utils@8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4))(@vue/compiler-sfc@3.4.21)(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)(vitest@1.3.1(@types/node@20.16.3))
       eslint:
         specifier: npm:eslint-ts-patch@^8.57.0-0
         version: eslint-ts-patch@8.57.0-0
@@ -22,8 +22,8 @@ importers:
         specifier: ^8.57.0-0
         version: 8.57.0-0
       lint-staged:
-        specifier: ^15.2.9
-        version: 15.2.9
+        specifier: ^15.2.10
+        version: 15.2.10
       simple-git-hooks:
         specifier: ^2.11.1
         version: 2.11.1
@@ -34,8 +34,8 @@ importers:
         specifier: ^3.0.0-alpha.62
         version: 3.0.0-alpha.62(@emnapi/runtime@1.1.1)
       '@types/node':
-        specifier: ^20.16.1
-        version: 20.16.1
+        specifier: ^20.16.3
+        version: 20.16.3
       fast-glob:
         specifier: ^3.3.2
         version: 3.3.2
@@ -51,7 +51,7 @@ importers:
     devDependencies:
       vitest:
         specifier: ^1.3.1
-        version: 1.3.1(@types/node@20.16.1)
+        version: 1.3.1(@types/node@20.16.3)
 
 packages:
 
@@ -996,8 +996,8 @@ packages:
   '@types/mute-stream@0.0.4':
     resolution: {integrity: sha512-CPM9nzrCPPJHQNA9keH9CVkVI+WR5kMa+7XEs5jcGQ0VoAGnLv242w8lIVgwAEfmE4oufJRaTc9PNLQl0ioAow==}
 
-  '@types/node@20.16.1':
-    resolution: {integrity: sha512-zJDo7wEadFtSyNz5QITDfRcrhqDvQI1xQNQ0VoizPjM/dVAODqqIUWbJPkvsxmTI0MYRGRikcdjMPhOssnPejQ==}
+  '@types/node@20.16.3':
+    resolution: {integrity: sha512-/wdGiWRkMOm53gAsSyFMXFZHbVg7C6CbkrzHNpaHoYfsUWPg7m6ZRKtvQjgvQ9i8WT540a3ydRlRQbxjY30XxQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2013,8 +2013,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@15.2.9:
-    resolution: {integrity: sha512-BZAt8Lk3sEnxw7tfxM7jeZlPRuT4M68O0/CwZhhaw6eeWu0Lz5eERE3m386InivXB64fp/mDID452h48tvKlRQ==}
+  lint-staged@15.2.10:
+    resolution: {integrity: sha512-5dY5t743e1byO19P9I4b3x8HJwalIznL5E1FWYnU6OWw33KxNBSLAc6Cy7F2PsFEO8FKnLwjwm5hx7aMF0jzZg==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -2085,8 +2085,8 @@ packages:
   micromark@2.11.4:
     resolution: {integrity: sha512-+WoovN/ppKolQOFIAajxi7Lu9kInbPxFuTBVEavFcL8eAfVstoc5MocPmqBeAdBOJV00uaVjegzH4+MA0DN/uA==}
 
-  micromatch@4.0.7:
-    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
+  micromatch@4.0.8:
+    resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
 
   mimic-fn@4.0.0:
@@ -2990,7 +2990,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@antfu/eslint-config@3.0.0(@typescript-eslint/utils@8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4))(@vue/compiler-sfc@3.4.21)(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)(vitest@1.3.1(@types/node@20.16.1))':
+  '@antfu/eslint-config@3.0.0(@typescript-eslint/utils@8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4))(@vue/compiler-sfc@3.4.21)(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)(vitest@1.3.1(@types/node@20.16.3))':
     dependencies:
       '@antfu/install-pkg': 0.4.1
       '@clack/prompts': 0.7.0
@@ -2998,7 +2998,7 @@ snapshots:
       '@stylistic/eslint-plugin': 2.7.2(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)
       '@typescript-eslint/eslint-plugin': 8.3.0(@typescript-eslint/parser@8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4))(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)
       '@typescript-eslint/parser': 8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)
-      '@vitest/eslint-plugin': 1.1.0(@typescript-eslint/utils@8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4))(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)(vitest@1.3.1(@types/node@20.16.1))
+      '@vitest/eslint-plugin': 1.1.0(@typescript-eslint/utils@8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4))(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)(vitest@1.3.1(@types/node@20.16.3))
       eslint: eslint-ts-patch@8.57.0-0
       eslint-config-flat-gitignore: 0.3.0(eslint-ts-patch@8.57.0-0)
       eslint-flat-config-utils: 0.3.1
@@ -3341,7 +3341,7 @@ snapshots:
       '@inquirer/figures': 1.0.3
       '@inquirer/type': 1.4.0
       '@types/mute-stream': 0.0.4
-      '@types/node': 20.16.1
+      '@types/node': 20.16.3
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       cli-spinners: 2.9.2
@@ -3858,9 +3858,9 @@ snapshots:
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 20.16.1
+      '@types/node': 20.16.3
 
-  '@types/node@20.16.1':
+  '@types/node@20.16.3':
     dependencies:
       undici-types: 6.19.6
 
@@ -3957,13 +3957,13 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitest/eslint-plugin@1.1.0(@typescript-eslint/utils@8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4))(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)(vitest@1.3.1(@types/node@20.16.1))':
+  '@vitest/eslint-plugin@1.1.0(@typescript-eslint/utils@8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4))(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)(vitest@1.3.1(@types/node@20.16.3))':
     dependencies:
       eslint: eslint-ts-patch@8.57.0-0
     optionalDependencies:
       '@typescript-eslint/utils': 8.3.0(eslint-ts-patch@8.57.0-0)(typescript@5.5.4)
       typescript: 5.5.4
-      vitest: 1.3.1(@types/node@20.16.1)
+      vitest: 1.3.1(@types/node@20.16.3)
 
   '@vitest/expect@1.3.1':
     dependencies:
@@ -4727,7 +4727,7 @@ snapshots:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.7
+      micromatch: 4.0.8
 
   fast-json-stable-stringify@2.1.0: {}
 
@@ -4992,7 +4992,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@15.2.9:
+  lint-staged@15.2.10:
     dependencies:
       chalk: 5.3.0
       commander: 12.1.0
@@ -5000,7 +5000,7 @@ snapshots:
       execa: 8.0.1
       lilconfig: 3.1.2
       listr2: 8.2.4
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       pidtree: 0.6.0
       string-argv: 0.3.2
       yaml: 2.5.0
@@ -5086,7 +5086,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  micromatch@4.0.7:
+  micromatch@4.0.8:
     dependencies:
       braces: 3.0.3
       picomatch: 2.3.1
@@ -5815,13 +5815,13 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-node@1.3.1(@types/node@20.16.1):
+  vite-node@1.3.1(@types/node@20.16.3):
     dependencies:
       cac: 6.7.14
       debug: 4.3.6
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.1.6(@types/node@20.16.1)
+      vite: 5.1.6(@types/node@20.16.3)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5832,16 +5832,16 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.1.6(@types/node@20.16.1):
+  vite@5.1.6(@types/node@20.16.3):
     dependencies:
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.13.0
     optionalDependencies:
-      '@types/node': 20.16.1
+      '@types/node': 20.16.3
       fsevents: 2.3.3
 
-  vitest@1.3.1(@types/node@20.16.1):
+  vitest@1.3.1(@types/node@20.16.3):
     dependencies:
       '@vitest/expect': 1.3.1
       '@vitest/runner': 1.3.1
@@ -5860,11 +5860,11 @@ snapshots:
       strip-literal: 2.0.0
       tinybench: 2.6.0
       tinypool: 0.8.2
-      vite: 5.1.6(@types/node@20.16.1)
-      vite-node: 1.3.1(@types/node@20.16.1)
+      vite: 5.1.6(@types/node@20.16.3)
+      vite-node: 1.3.1(@types/node@20.16.3)
       why-is-node-running: 2.2.2
     optionalDependencies:
-      '@types/node': 20.16.1
+      '@types/node': 20.16.3
     transitivePeerDependencies:
       - less
       - lightningcss
