@@ -13,8 +13,8 @@ importers:
         version: 5.6.2
     devDependencies:
       '@antfu/eslint-config':
-        specifier: ^3.5.0
-        version: 3.5.0(@typescript-eslint/utils@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(@vue/compiler-sfc@3.4.21)(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vitest@1.3.1(@types/node@20.16.5))
+        specifier: ^3.6.2
+        version: 3.6.2(@typescript-eslint/utils@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(@vue/compiler-sfc@3.4.21)(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vitest@1.3.1(@types/node@20.16.5))
       eslint:
         specifier: npm:eslint-ts-patch@^8.57.0-0
         version: eslint-ts-patch@8.57.0-0
@@ -63,8 +63,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@antfu/eslint-config@3.5.0':
-    resolution: {integrity: sha512-1Jn3iMBiz/OtE64+JFkJz0/NbI1RYPeZOEM/lTkEl3m1AFO+4Yuxp0rpUnRUzpz5OjldkWzgeVwaGb4uZfmaOA==}
+  '@antfu/eslint-config@3.6.2':
+    resolution: {integrity: sha512-cewFaIEuSSOjbIsNts8gjeMLQrrMDhZjZJHMWk+OyVGJLHRE09JiF5Yg5+XjMVYlG/7fPqeuwEehLrer+8zMfA==}
     hasBin: true
     peerDependencies:
       '@eslint-react/eslint-plugin': ^1.5.8
@@ -1070,8 +1070,8 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@vitest/eslint-plugin@1.1.0':
-    resolution: {integrity: sha512-Ur80Y27Wbw8gFHJ3cv6vypcjXmrx6QHfw+q435h6Q2L+tf+h4Xf5pJTCL4YU/Jps9EVeggQxS85OcUZU7sdXRw==}
+  '@vitest/eslint-plugin@1.1.4':
+    resolution: {integrity: sha512-kudjgefmJJ7xQ2WfbUU6pZbm7Ou4gLYRaao/8Ynide3G0QhVKHd978sDyWX4KOH0CCMH9cyrGAkFd55eGzJ48Q==}
     peerDependencies:
       '@typescript-eslint/utils': '>= 8.0'
       eslint: '>= 8.57.0'
@@ -1528,13 +1528,13 @@ packages:
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-antfu@2.5.0:
-    resolution: {integrity: sha512-YLIWE22/ERe6Jpqt6bJdvALw8SWvf4x2DQjvVpRvAv8LrdHbwWckkoueAf8oQFgSOLsL1R/axa+exjpubPp0fw==}
+  eslint-plugin-antfu@2.6.0:
+    resolution: {integrity: sha512-4dz0VgWGpZ6jUSEUPSI6OGFqBc+P8c7zFFXht5t+YwzIvBsruqVX7Hjl3I8KNNEyJmA4fL3+GIc+EWU1woTp1A==}
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-command@0.2.4:
-    resolution: {integrity: sha512-IbZnQY21pOanbcCh/bAWWl+1BynV2HuDE75URMmk/28Tdn+PM7CoKeibXtPGrL7KQdIEHMgUEnRwwI8qmggVMA==}
+  eslint-plugin-command@0.2.5:
+    resolution: {integrity: sha512-mbCaSHD37MT8nVJnJUz2oeDfhz0wdOjfrqQVWkSpXuj3uU8m7/FK/niV2bL922af3M1js5x7Xcu3PwqWsrahfA==}
     peerDependencies:
       eslint: '*'
 
@@ -1550,8 +1550,8 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
-  eslint-plugin-jsdoc@50.2.2:
-    resolution: {integrity: sha512-i0ZMWA199DG7sjxlzXn5AeYZxpRfMJjDPUl7lL9eJJX8TPRoIaxJU4ys/joP5faM5AXE1eqW/dslCj3uj4Nqpg==}
+  eslint-plugin-jsdoc@50.2.3:
+    resolution: {integrity: sha512-aNh/dz3wSkyo53y2KWDCrA8fDuXDMtMVflcbesd8AFPgcF8ugOv9mJxC7qKB95R96nzCB91iEwU7MMznh/7okQ==}
     engines: {node: '>=18'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -1572,14 +1572,14 @@ packages:
     resolution: {integrity: sha512-brcKcxGnISN2CcVhXJ/kEQlNa0MEfGRtwKtWA16SkqXHKitaKIMrfemJKLKX1YqDU5C/5JY3PvZXd5jEW04e0Q==}
     engines: {node: '>=5.0.0'}
 
-  eslint-plugin-perfectionist@3.5.0:
-    resolution: {integrity: sha512-vwDNuxlAlbZJ3DjHo6GnfZrmMlJBLFrkOLBV/rYvVnLFD+x54u9VyJcGOfJ2DK9d1cd3a/C/vtBrbBNgAC6Mrg==}
+  eslint-plugin-perfectionist@3.6.0:
+    resolution: {integrity: sha512-sA6ljy6dL/9cM5ruZ/pMqRVt0FQ4Z7mbQWlBYpyX9941LVfm65d2jl2k1ZbWD3ud9Wm+/NKgOvRnAatsKhMJbA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       astro-eslint-parser: ^1.0.2
       eslint: '>=8.0.0'
       svelte: '>=3.0.0'
-      svelte-eslint-parser: ^0.41.0
+      svelte-eslint-parser: ^0.41.1
       vue-eslint-parser: '>=9.0.0'
     peerDependenciesMeta:
       astro-eslint-parser:
@@ -1609,8 +1609,8 @@ packages:
     peerDependencies:
       eslint: '>=8.56.0'
 
-  eslint-plugin-unused-imports@4.1.3:
-    resolution: {integrity: sha512-lqrNZIZjFMUr7P06eoKtQLwyVRibvG7N+LtfKtObYGizAAGrcqLkc3tDx+iAik2z7q0j/XI3ihjupIqxhFabFA==}
+  eslint-plugin-unused-imports@4.1.4:
+    resolution: {integrity: sha512-YptD6IzQjDardkl0POxnnRBhU1OEePMV0nd6siHaRBbd+lyh6NAhFEobiznKU7kTsSsDeSD62Pe7kAM1b7dAZQ==}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^8.0.0-0 || ^7.0.0 || ^6.0.0 || ^5.0.0
       eslint: ^9.0.0 || ^8.0.0
@@ -3093,7 +3093,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@antfu/eslint-config@3.5.0(@typescript-eslint/utils@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(@vue/compiler-sfc@3.4.21)(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vitest@1.3.1(@types/node@20.16.5))':
+  '@antfu/eslint-config@3.6.2(@typescript-eslint/utils@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(@vue/compiler-sfc@3.4.21)(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vitest@1.3.1(@types/node@20.16.5))':
     dependencies:
       '@antfu/install-pkg': 0.4.1
       '@clack/prompts': 0.7.0
@@ -3102,23 +3102,23 @@ snapshots:
       '@stylistic/eslint-plugin': 2.8.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)
       '@typescript-eslint/eslint-plugin': 8.5.0(@typescript-eslint/parser@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)
       '@typescript-eslint/parser': 8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)
-      '@vitest/eslint-plugin': 1.1.0(@typescript-eslint/utils@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vitest@1.3.1(@types/node@20.16.5))
+      '@vitest/eslint-plugin': 1.1.4(@typescript-eslint/utils@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vitest@1.3.1(@types/node@20.16.5))
       eslint: eslint-ts-patch@8.57.0-0
       eslint-config-flat-gitignore: 0.3.0(eslint-ts-patch@8.57.0-0)
       eslint-flat-config-utils: 0.4.0
       eslint-merge-processors: 0.1.0(eslint-ts-patch@8.57.0-0)
-      eslint-plugin-antfu: 2.5.0(eslint-ts-patch@8.57.0-0)
-      eslint-plugin-command: 0.2.4(eslint-ts-patch@8.57.0-0)
+      eslint-plugin-antfu: 2.6.0(eslint-ts-patch@8.57.0-0)
+      eslint-plugin-command: 0.2.5(eslint-ts-patch@8.57.0-0)
       eslint-plugin-import-x: 4.2.1(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)
-      eslint-plugin-jsdoc: 50.2.2(eslint-ts-patch@8.57.0-0)
+      eslint-plugin-jsdoc: 50.2.3(eslint-ts-patch@8.57.0-0)
       eslint-plugin-jsonc: 2.16.0(eslint-ts-patch@8.57.0-0)
       eslint-plugin-n: 17.10.2(eslint-ts-patch@8.57.0-0)
       eslint-plugin-no-only-tests: 3.3.0
-      eslint-plugin-perfectionist: 3.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vue-eslint-parser@9.4.3(eslint-ts-patch@8.57.0-0))
+      eslint-plugin-perfectionist: 3.6.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vue-eslint-parser@9.4.3(eslint-ts-patch@8.57.0-0))
       eslint-plugin-regexp: 2.6.0(eslint-ts-patch@8.57.0-0)
       eslint-plugin-toml: 0.11.1(eslint-ts-patch@8.57.0-0)
       eslint-plugin-unicorn: 55.0.0(eslint-ts-patch@8.57.0-0)
-      eslint-plugin-unused-imports: 4.1.3(@typescript-eslint/eslint-plugin@8.5.0(@typescript-eslint/parser@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)
+      eslint-plugin-unused-imports: 4.1.4(@typescript-eslint/eslint-plugin@8.5.0(@typescript-eslint/parser@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)
       eslint-plugin-vue: 9.28.0(eslint-ts-patch@8.57.0-0)
       eslint-plugin-yml: 1.14.0(eslint-ts-patch@8.57.0-0)
       eslint-processor-vue-blocks: 0.1.2(@vue/compiler-sfc@3.4.21)(eslint-ts-patch@8.57.0-0)
@@ -4051,7 +4051,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitest/eslint-plugin@1.1.0(@typescript-eslint/utils@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vitest@1.3.1(@types/node@20.16.5))':
+  '@vitest/eslint-plugin@1.1.4(@typescript-eslint/utils@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vitest@1.3.1(@types/node@20.16.5))':
     dependencies:
       eslint: eslint-ts-patch@8.57.0-0
     optionalDependencies:
@@ -4538,12 +4538,12 @@ snapshots:
     dependencies:
       eslint: eslint-ts-patch@8.57.0-0
 
-  eslint-plugin-antfu@2.5.0(eslint-ts-patch@8.57.0-0):
+  eslint-plugin-antfu@2.6.0(eslint-ts-patch@8.57.0-0):
     dependencies:
       '@antfu/utils': 0.7.10
       eslint: eslint-ts-patch@8.57.0-0
 
-  eslint-plugin-command@0.2.4(eslint-ts-patch@8.57.0-0):
+  eslint-plugin-command@0.2.5(eslint-ts-patch@8.57.0-0):
     dependencies:
       '@es-joy/jsdoccomment': 0.48.0
       eslint: eslint-ts-patch@8.57.0-0
@@ -4572,7 +4572,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-jsdoc@50.2.2(eslint-ts-patch@8.57.0-0):
+  eslint-plugin-jsdoc@50.2.3(eslint-ts-patch@8.57.0-0):
     dependencies:
       '@es-joy/jsdoccomment': 0.48.0
       are-docs-informative: 0.0.2
@@ -4614,7 +4614,7 @@ snapshots:
 
   eslint-plugin-no-only-tests@3.3.0: {}
 
-  eslint-plugin-perfectionist@3.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vue-eslint-parser@9.4.3(eslint-ts-patch@8.57.0-0)):
+  eslint-plugin-perfectionist@3.6.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)(vue-eslint-parser@9.4.3(eslint-ts-patch@8.57.0-0)):
     dependencies:
       '@typescript-eslint/types': 8.5.0
       '@typescript-eslint/utils': 8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2)
@@ -4668,7 +4668,7 @@ snapshots:
       semver: 7.6.3
       strip-indent: 3.0.0
 
-  eslint-plugin-unused-imports@4.1.3(@typescript-eslint/eslint-plugin@8.5.0(@typescript-eslint/parser@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0):
+  eslint-plugin-unused-imports@4.1.4(@typescript-eslint/eslint-plugin@8.5.0(@typescript-eslint/parser@8.5.0(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0)(typescript@5.6.2))(eslint-ts-patch@8.57.0-0):
     dependencies:
       eslint: eslint-ts-patch@8.57.0-0
     optionalDependencies:
