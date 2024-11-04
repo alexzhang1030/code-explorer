@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@napi-rs/cli": "^3.0.0-alpha.64",
-    "@types/node": "^20.17.1",
+    "@types/node": "^22.8.7",
     "fast-glob": "^3.3.2",
     "unbuild": "^2.0.0"
   }
