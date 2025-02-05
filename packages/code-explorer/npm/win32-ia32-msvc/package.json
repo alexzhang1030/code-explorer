@@ -28,7 +28,7 @@
     "rolldown.win32-ia32-msvc.node"
   ],
   "engines": {
-    "node": ">= 22.13.0"
+    "node": ">= 22.13.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
