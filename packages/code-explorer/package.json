@@ -66,8 +66,8 @@
     "@code-explorer/binding-win32-ia32-msvc": "0.0.1"
   },
   "devDependencies": {
-    "@napi-rs/cli": "^3.0.0-alpha.70",
-    "@types/node": "^22.13.4",
+    "@napi-rs/cli": "^3.0.0-alpha.71",
+    "@types/node": "^22.13.5",
     "fast-glob": "^3.3.3",
     "unbuild": "^3.3.1"
   }
